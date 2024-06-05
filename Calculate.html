@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="boots/font-awesome/css/all.min.css">
+  <title> Əmək haqqı hesablanması</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="salary-paychek">
+      <h3> Əməkhaqqı Hesablanması</h3>
+      <form id="form">
+        <div class="row">
+          <div class="col-sm">
+            <input min="0" id="salary" type="number" placeholder= "Məbləği daxil edin" > 
+            <div class="form-check">
+              <label><input type="checkbox" id="guzestli"> Güzəştli </label>
+            </div>
+          </div>
+          <div class="col-sm">
+            <select class="form-select" id="firstSelect" aria-label="Default select example">
+              <option selected value="1">Rezident</option>
+              <option value="2">Dövlət / neft sektoru</option>
+              <option value="3">Qeyri-dövlət / qeyri-neft sektoru</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <p class="party-member-title"> Siyasi partiya üzvlüyünüz varmı? </p>
+            <div class="form-check" id="checkbox"> 
+              <label><input type="checkbox" id="yes"> Bəli </label>
+              <label><input type="checkbox" checked id="no"> Xeyr </label>
+              <input min="0" max="5" type="number" id="member" placeholder="1%">
+            </div>
+          </div>
+          <div class="col-sm">
+            <select class="form-select" id="prize" aria-label="Default select example">
+              <option  selected  value="0" > Mükafat </option>
+              <option value="1">25% </option>
+              <option value="2">50%</option>
+              <option value="3">75%</option>
+              <option value="4">100%</option>
+            </select> 
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-check">
+              <p class="trade-union"> Həmkarlar ittifaqı üzvlüyü </p>
+              <input min="0" max="5" type="number" id="trade" placeholder="1%">
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="guzestli-select" id="second-select">
+              <select class="form-select" id="second-select-wrapper" aria-label="Default select example">
+                <option disabled selected> Seçim edin </option>
+                <option value="1">Vergi tutulmalı olan aylıq gəlir 400 manat məbləğində azaldılır: </option>
+                <option value="2">Vergi tutulmalı olan aylıq gəlir 200 manat məbləğində azaldılır:</option>
+                <option value="3">Vergi tutulmalı olan aylıq gəlir 100 manat məbləğində azaldılır:</option>
+                <option value="4">Vergi tutulmalı olan aylıq gəlir 50 manat məbləğində azaldılır:</option>
+              </select>
+              <button popovertarget="my-popover" type="button" class="btn popover-btn"> <i
+                  class="fa-thin fa-circle-info"></i> Ətraflı
+              </button>
+            </div>
+            
+          </div>
+        </div>
+        <button popovertarget="hesabla" type="submit" class="btn btn-primary"> Hesabla </button>
+      </form>
+      <div id="result">  </div>
+      <button popovertarget="popoverSecond" type="button" class="btn popover-btn"> <i
+        class="fa-thin fa-circle-info"></i></button>
+  
+      <div id="my-popover" popover>
+        <button class="close-btn" type="button" popovertarget="my-popover" popovertargetaction="hide">
+          <span aria-hidden=”true”>❌</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <p> <strong> Vergi tutulmalı olan aylıq gəliri 400 manat məbləğində azaldılır: </strong>
+          <br> Azərbaycan Respublikasının Vətən Müharibəsi Qəhrəmanlarının;
+          <br> Azərbaycanın Milli Qəhrəmanlarının;
+          <br> Sovet İttifaqı və Sosialist Əməyi Qəhrəmanlarının;
+          <br> Müharibə ilə əlaqədar əlilliyi olan şəxslərin;
+          <br> Həlak olmuş, yaxud sonralar vəfat etmiş döyüşçülərin dul arvadlarının (ərlərinin) və övladlarının;
+          <br> 1941-1945-ci illərdə arxa cəbhədə fədakar əməyinə görə orden və medallarla təltif edilmiş
+          şəxslərin;
+          <br> Qanunvericiliklə müəyyən edilmiş qaydada müharibə veteran adı almış şəxslərin;
+          <br> Çernobıl AES-də dogər atom obyektlərində digər radiasiya qəzaları nəticəsində şüa xəstəliyinə
+          tutulmuş şəxs;
+          <br> <strong> Vergi tutulmalı olan aylıq gəliri 200 manat məbləğində azaldılır: </strong>
+          <br>Orqanizmin funksiyalarının 61-100 faiz pozulmasına görə əlilliyi müəyyən edilmiş şəxs, 18 yaşınadək
+          əlilliyi müəyyən edilmiş şəxs
+          <br> <strong> Vergi tutulmalı olan aylıq gəliri 100 manat məbləğində azaldılır: </strong>
+          <br> Həlak olmuş, yaxud sonralar vəfat etmiş döyüşçünün, vəzifələrinin icrası zamanı həlak olmuş dövlət
+          qulluqçusunun valideyni və arvadı (əri)
+          <br> 1990-cı il yanvarın 20-də SSRİ qoşunlarının müdaxiləsi nəticəsində həlak olmuş şəxsin valideyni,
+          arvadı (əri) və övladı
+          <br>Əfqanıstana və döyüş əməliyyatları aparılan başqa ölkələrə göndərilmiş hərbi qulluqçular və
+          təlim-yoxlama toplanışlarına çağırılmış hərbi vəzifəli şəxs
+          <br> Məcburi köçkün və onlara bərabər tutulan şəxs
+          <br> <strong> Vergi tutulmalı olan aylıq gəliri 50 manat məbləğində azaldılır: </strong>
+          <br> Qohumluq dərəcəsindən asılı olmayaraq himayəsində azı üç nəfərdən birinin vergi tutulmalı olan
+          aylıq gəliri 50 manat məbləğində azaldılır
+        <p>
+      </div>
+      <div id="popoverSecond" popover>
+        <button class="close-btn" type="button" popovertarget="popoverSecond" popovertargetaction="hide">
+          <span aria-hidden=”true”>❌</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <table class="table table-bordered">
+          <tr>
+              <th>Vergiler</th>
+              <th>Nəticə</th>
+          </tr>
+          <tr>
+              <td>Gross </td>
+              <td id="salaryCell"></td>
+          </tr>
+          <tr>
+              <td>Gəlir Vergisi</td>
+              <td id="incomeTaxCell"></td>
+               
+          </tr>
+          <tr>
+              <td>DSMF</td>
+              <td id="dsmfCell"></td>
+             
+          </tr>
+          <tr>
+              <td>Tibbi Sigorta</td>
+              <td id="medicalsCell"></td>
+          </tr>
+          <tr>
+              <td>Həmkarlar</td>
+              <td id="tradeCell"></td>
+          </tr>
+          <tr>
+              <td>İşsizlik sığortası</td>
+              <td id="unemployedCell"></td>
+          </tr>
+          <tr>
+              <td>Partiya üzvlüyü</td>
+              <td id="partyCell"></td>
+          </tr>
+          <tr>
+              <td>Nett</td>
+              <td id="totalAmountCell"></td>
+          </tr>
+      </table>
+      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> 
+</body>

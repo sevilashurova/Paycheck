@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #edf4fb;
+}
+
+.salary-paychek{
+    padding: 20px;
+    background: #A5BACF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(50px); 
+    padding-left: 10px;
+    
+}
+h3{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00467a;
+}
+
+.form-check{
+    padding: 5px;
+}
+
+
+p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#hesabla{
+    margin: 10px;
+}
+
+.trigger-btn {
+    background: #ddd;
+    font-weight: 800;
+    border: 2px solid black;
+  }
+  
+  .close-btn {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.5rem;
+  }
+  #popoverSecond{
+    padding: 1rem;
+    max-width: 50%;
+    position: absolute;
+    top: 1rem;
+    margin: 0 auto;
+  }
+  #my-popover {
+    padding: 1rem;
+    max-width: 50%;
+    position: absolute;
+    top: 1rem;
+    margin: 0 auto;
+  }
+  .popover-btn{
+    color:#00467a ;
+  }
+  body {
+    display: grid;
+    font-family: system-ui, sans-serif;
+    place-items: center;
+    height: 100dvh;
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  #hesabla {
+    color: black;
+    font-weight: 400;
+    padding: 1rem;
+    max-width: 50%;
+    line-height: 1.4;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+  
+  .trade-union{
+    margin-bottom: 3px;
+  }
+::placeholder {
+    padding-left: 10px;
+}
